@@ -1,0 +1,91 @@
+.formMain{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-image: url(./bg.jpg);
+    backdrop-filter: blur(15px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formContainer{
+    width: 23%;
+    height: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formContainer input{
+    width: 250px;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid white;
+    margin: 5px;
+    outline: 0;
+    padding-inline: 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+}
+.formContainer input::placeholder{
+    color: white;
+}
+.formContainer button{
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0px;
+    margin: 5px;
+    /* background-color: #0080FF; */
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+}
+.heading{
+    width: 250px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+.password{
+    width: 250px;
+    height: 35px;
+    margin: 5px;
+    border: 1px solid white;
+    display: flex;
+    margin-top: 8px;
+}
+.password input{
+    width: 80%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+}
+.show{
+    height: 100%;
+    font-size: 14px;
+    align-content: center;
+    cursor: default;
+}
+
+.forgotpassword{
+    margin: 10px;
+    text-align: end;
+}
+.forgotpassword p a{
+    text-decoration: none;
+    font-size: 12px;
+    /* color: #0080FF; */
+    color: white;
+    cursor: pointer;
+}

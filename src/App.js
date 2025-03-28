@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import LoginComponent from './components/logincomponent/LoginComponent';
+import AllUsersComponent from './components/alluserscomponent/AllUsersComponent';
 
 function App() {
+
+  let [token, setToken] = useState("");
+  useEffect(()=>{
+    localStorage.setItem("token",token);
+  },[token])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/my-app' element={<LoginComponent setToken={setToken}/>}/>
+          {
+            token?<Route path='/dashboard' element={<AllUsersComponent/>}/> :<> </>
+          }
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
